@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Layout } from 'antd';
 
 export const FooterWrapper = styled(Layout.Footer)`
+  margin-top: 20px;
   .copyright {
     text-align: center;
     color: ${({ theme }) => theme.text.primary};

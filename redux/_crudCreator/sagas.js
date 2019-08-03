@@ -101,8 +101,8 @@ function* editSaga(
   options = {},
   resource,
   successAction,
-  failureAction,
-  getByIdFunc
+  failureAction
+  // getByIdFunc
 ) {
   // delete data.c
   try {

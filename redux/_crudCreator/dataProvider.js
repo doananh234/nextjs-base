@@ -2,7 +2,7 @@ import { keyBy, uniq } from 'lodash';
 // import I18n from 'react-native-i18n';
 import { PRIMARY_KEY } from './actions';
 
-export const convertRequestParams = (type, params, options) => {
+export const convertRequestParams = (type, params) => {
   const query = {
     q: '',
     offset: (params.page - 1) * params.limit,

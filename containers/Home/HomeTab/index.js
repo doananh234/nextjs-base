@@ -1,29 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Row, Col } from 'antd';
+import BasicLayout from '../../../components/layout/BasicLayout';
 import Banner from '../Banner/index';
-import Container from '../../../components/layout/Container';
 import Categories from '../Categories';
 import UserInfo from '../UserInfo';
 import HomeTabContent from '../HomeTabContent';
+import Ranking from '../Ranking';
+import AppStore from '../AppStore';
 
 const HomeTab = props => (
-  <Container>
+  <BasicLayout>
     <Banner />
-    <Row gutter={16}>
-      <Col sm={24} md={6}>
-        <UserInfo />
+    <Row type='flex'>
+      <Col xs={24} md={12} lg={6}>
+        <UserInfo isHiddenMobile />
         <Categories />
       </Col>
-      <Col sm={24} md={10}>
+      <Col xs={24} md={12} lg={10}>
         <HomeTabContent />
       </Col>
-      <Col sm={24} md={8}>
-        <UserInfo />
-        <Categories />
+      <Col xs={24} md={24} lg={8}>
+      <Row type='flex'>
+        <Col xs={24} md={12} lg={24}>
+          <Ranking isHiddenMobile />
+        </Col>
+        <Col xs={24} md={12} lg={24}>
+          <AppStore />
+        </Col>
+      </Row>
       </Col>
     </Row>
-  </Container>
+  </BasicLayout>
 );
 HomeTab.propTypes = {};
 

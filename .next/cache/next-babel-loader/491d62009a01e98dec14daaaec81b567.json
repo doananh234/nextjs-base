@@ -1,0 +1,1 @@
+{"ast":null,"code":"import styled from 'styled-components';\nexport const BrandSectionWrapper = styled.div.withConfig({\n  displayName: \"styles__BrandSectionWrapper\",\n  componentId: \"sc-1ncjntc-0\"\n})([\"@media (max-width:577px){}\"]);","map":null,"metadata":{},"sourceType":"module"}

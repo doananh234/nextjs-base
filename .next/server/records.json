@@ -15,21 +15,17 @@
   },
   "chunks": {
     "byName": {
-      "static/KGmqqh8s_-oxSVARfkTwn/pages/_app.js": 0,
-      "static/KGmqqh8s_-oxSVARfkTwn/pages/_document.js": 1,
-      "static/KGmqqh8s_-oxSVARfkTwn/pages/_error.js": 2,
-      "static/KGmqqh8s_-oxSVARfkTwn/pages/index.js": 3,
-      "static/KgXsNA5gV1LvXh_moNHHM/pages/_app.js": 4,
-      "static/KgXsNA5gV1LvXh_moNHHM/pages/_document.js": 5,
-      "static/KgXsNA5gV1LvXh_moNHHM/pages/_error.js": 6,
-      "static/KgXsNA5gV1LvXh_moNHHM/pages/index.js": 7
+      "static/Y76WCvhxTm3wTImbDyCmp/pages/_app.js": 0,
+      "static/Y76WCvhxTm3wTImbDyCmp/pages/_document.js": 1,
+      "static/Y76WCvhxTm3wTImbDyCmp/pages/_error.js": 2,
+      "static/Y76WCvhxTm3wTImbDyCmp/pages/index.js": 3
     },
     "bySource": {},
     "usedIds": [
-      4,
-      5,
-      6,
-      7
+      0,
+      1,
+      2,
+      3
     ]
   }
 }

@@ -4,8 +4,9 @@ export const MobileTabBarWrapper = styled.div`
   flex: 1;
   background: ${({ theme }) => theme.background.content};
   & > .ant-tabs {
+    background: ${({ theme }) => theme.background.content};
     & > .ant-tabs-bar {
-      background: ${({ theme }) => theme.background.content};
+      background: ${({ theme }) => theme.background.container};
       position: fixed;
       left: 0;
       right: 0;
@@ -16,7 +17,7 @@ export const MobileTabBarWrapper = styled.div`
         bottom: 0px;
         .ant-tabs-nav-container {
           display: flex;
-          width: 100%;
+          width: 100vh;
         }
         .ant-tabs-tab {
           flex: 1;
@@ -35,7 +36,7 @@ export const MobileTabBarWrapper = styled.div`
       }
     }
     @media (max-width: 577px) {
-      height: 100vh;
+      height: 100%;
       padding-bottom: 40px;
     }
   }

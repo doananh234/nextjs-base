@@ -30,7 +30,7 @@ export const BannerItemWrapper = styled.div`
   }
   @media (max-width: 577px) {
     .bannerContainer {
-      border-radius: 20px;
+      border-radius: 15px;
       height: 200px;
     }
     padding: 7.5px;

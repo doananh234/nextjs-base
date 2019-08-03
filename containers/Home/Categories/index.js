@@ -87,7 +87,7 @@ const Categories = props => {
     // centerPadding: '60px',
     responsive: [
       {
-        breakpoint: 577,
+        breakpoint: 768,
         settings: {
           centerMode: true,
           dots: false,
@@ -101,8 +101,8 @@ const Categories = props => {
       <Carousel {...settings}>
         {chunk(CATEGORIES, 9).map((group, index) => (
           <div className="categoryGroup">
-            <Card bordered={false} key={String(`group${index}`)}>
-              <Row>
+            <Card className='noPadding' bordered={false} key={String(`group${index}`)}>
+              <Row type="flex">
                 {group.map((e, index2) => (
                   <Col key={String(`category${index2}`)} span={8}>
                     <CategoryItem item={e} />

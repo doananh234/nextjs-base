@@ -71,6 +71,13 @@ async function xFetch(path, headerOptions, ops = { noParse: false }) {
 
 export default xFetch;
 
+function getQueryString(params) {
+  const esc = encodeURIComponent;
+  return Object.keys(params)
+    .map(k => `${esc(k)}=${esc(params[k])}`)
+    .join('&');
+}
+
 function requestWrapper(method) {
   return async (_url, _data = null, _params = {}, context) => {
     let url = _url;
@@ -115,13 +122,6 @@ function requestWrapper(method) {
     };
     return xFetch(url, paramsObj);
   };
-}
-
-function getQueryString(params) {
-  const esc = encodeURIComponent;
-  return Object.keys(params)
-    .map(k => `${esc(k)}=${esc(params[k])}`)
-    .join('&');
 }
 
 export const get = requestWrapper('GET');

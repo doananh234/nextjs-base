@@ -15,9 +15,26 @@
     "shopping": "Shopping",
     "all": "All",
     "refunds": "Refunds",
-    "coupons": "Coupons"
+    "coupons": "Coupons",
+    "account": "Account",
+    "ranking": "Ranking",
+    "appStore": {
+      "title": "Cashbag App",
+      "description": "got more refund money with app.",
+      "tryItNow": "try it now!"
+    }
   },
   "user": {
     "waitingConfirmMoney": "Waiting Confirm Money"
+  },
+  "settings": {
+    "logout": "Logout",
+    "notification": "Notification",
+    "history": "Order History",
+    "support": "Support",
+    "ratting": "Ratting"
+  },
+  "refunds": {
+    "refunded": "Refunded"
   }
 }

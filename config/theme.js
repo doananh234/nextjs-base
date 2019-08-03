@@ -27,6 +27,7 @@ const theme = {
   grayscaleDark: '#bababa',
   grayscaleLight: '#F3F3F3',
   text: {
+    primary: "#000",
     title: '#7f7f7f',
     heading: '#3a393d',
     headingLight: '#474b68',
@@ -60,7 +61,7 @@ const theme = {
   },
   background: {
     container: '#fff',
-    content: '#f9f9f9',
+    content: '#f0f2f5',
   },
 };
 

@@ -28,8 +28,9 @@ module.exports = withLess({
     modifyVars: Object.assign(themeVariables, {
       '@primary-color': themeConfig.primary,
       '@layout-header-background': themeConfig.primary,
-      '@layout-footer-background': themeConfig.background.content,
-      '@card-radius': '20px',
+      '@layout-footer-background': themeConfig.background.container,
+      '@card-radius': '15px',
+      "@body-background": themeConfig.background.content,
     }), // make your antd custom effective
   },
   webpack: config => {

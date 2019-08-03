@@ -28,24 +28,21 @@
     "byName": {
       "commons": 0,
       "static/runtime/webpack.js": 1,
-      "static/KGmqqh8s_-oxSVARfkTwn/pages/_app.js": 2,
-      "static/KGmqqh8s_-oxSVARfkTwn/pages/_error.js": 3,
-      "static/KGmqqh8s_-oxSVARfkTwn/pages/index.js": 4,
+      "static/Y76WCvhxTm3wTImbDyCmp/pages/_app.js": 2,
+      "static/Y76WCvhxTm3wTImbDyCmp/pages/_error.js": 3,
+      "static/Y76WCvhxTm3wTImbDyCmp/pages/index.js": 4,
       "static/runtime/main.js": 5,
-      "styles": 6,
-      "static/KgXsNA5gV1LvXh_moNHHM/pages/_app.js": 7,
-      "static/KgXsNA5gV1LvXh_moNHHM/pages/_error.js": 8,
-      "static/KgXsNA5gV1LvXh_moNHHM/pages/index.js": 9
+      "styles": 6
     },
     "bySource": {},
     "usedIds": [
       0,
       1,
+      2,
+      3,
+      4,
       5,
-      6,
-      7,
-      8,
-      9
+      6
     ]
   }
 }

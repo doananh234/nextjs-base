@@ -1,4 +1,4 @@
-import { call, put } from 'redux-saga/effects';
+import { call } from 'redux-saga/effects';
 import _ from 'lodash';
 // import LoginActions from '../Redux/LoginRedux/actions';
 

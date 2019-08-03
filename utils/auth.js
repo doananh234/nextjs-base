@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import Router from 'next/router';
 import nextCookie from 'next-cookies';
-import cookie from 'js-cookie';
+// import cookie from 'js-cookie';
 
 // Gets the display name of a JSX component for dev tools
 const getDisplayName = Cpn => Cpn.displayName || Cpn.name || 'Component';

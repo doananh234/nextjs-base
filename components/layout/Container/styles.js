@@ -1,15 +1,13 @@
 import styled from 'styled-components';
 import { Layout } from 'antd';
 
-export const LayoutWrapper = styled(Layout)`
-  height: 100vh;
-  overflow: hidden;
+export const ContainerWrapper = styled(Layout)`
   & > * {
     transition: all 0.3s ease-in-out;
   }
 
   .ant-layout-content {
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
   }
   ul {
@@ -21,6 +19,7 @@ export const LayoutWrapper = styled(Layout)`
   .sectionTitle {
     font-size: 24px;
     padding: 20px;
+    margin-top: 10px;
     font-weight: bold;
     color: ${({ theme }) => theme.text.title};
     display: none;
@@ -29,11 +28,16 @@ export const LayoutWrapper = styled(Layout)`
     }
   }
   .ant-card {
-    .ant-card-body {
-      padding: 0px;
+    &.noPadding {
+      .ant-card-body {
+        padding: 0px;
+      }
     }
   }
   .ant-tabs-ink-bar {
     height: 5px;
+  }
+  .row {
+    display: flex;
   }
 `;

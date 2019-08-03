@@ -1,18 +1,16 @@
 import styled from 'styled-components';
 
 export const CategoriesWrapper = styled.section`
-  margin: 20px;
-  background: ${({ theme }) => theme.background.container};
-  border-radius: 20px;
-  @media (max-width: 577px) {
+  padding:0px 20px;
+  @media (max-width: 768px) {
     background: transparent;
     width: auto;
-    margin-left: 0px;
     .categoryGroup {
       padding: 0px 5px;
-      height: 300px;
+      height: 260px;
       .ant-card {
         height: 100%;
+        padding: 10px 0px;
       }
     }
   }

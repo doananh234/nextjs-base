@@ -1,10 +1,9 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
-import Banner from './Banner';
-import Container from '../../components/layout/Container';
-import MobileTabBar from '../../components/layout/MobileTabBar/index';
-import HomeTab from './HomeTab/index';
-import UserInfo from './UserInfo/index';
+import MobileTabBar from '../../components/layout/MobileTabBar';
+import HomeTab from './HomeTab';
+import UserInfo from './UserInfo';
+import Ranking from './Ranking';
 
 export default function Home() {
   const TABS = [
@@ -14,9 +13,9 @@ export default function Home() {
       icon: 'home',
     },
     {
-      key: 'history',
-      component: 'history',
-      icon: 'history',
+      key: 'trophy',
+      component: <Ranking />,
+      icon: 'trophy',
     },
     {
       key: 'gift',
@@ -25,12 +24,12 @@ export default function Home() {
     },
     {
       key: 'user',
-      component: <UserInfo isUserTab />,
+      component: <UserInfo />,
       icon: 'user',
     },
   ];
 
-  return <MobileTabBar tabs={TABS} />;
+  return (<MobileTabBar tabs={TABS} />);
 }
 
 Home.propTypes = {};

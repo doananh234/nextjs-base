@@ -1,4 +1,4 @@
-import { put, takeLatest, call } from 'redux-saga/effects';
+import { put, takeLatest } from 'redux-saga/effects';
 import { Types, loadDataSuccess, loadDataError } from './actions';
 
 function* loadDataSaga() {
