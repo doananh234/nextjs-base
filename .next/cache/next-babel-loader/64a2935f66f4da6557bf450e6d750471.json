@@ -1,0 +1,1 @@
+{"ast":null,"code":"import styled from 'styled-components';\nexport var RightHeaderWrapper = styled.div.withConfig({\n  displayName: \"styles__RightHeaderWrapper\",\n  componentId: \"q600qg-0\"\n})([\"flex:1;text-align:right;\"]);","map":null,"metadata":{},"sourceType":"module"}

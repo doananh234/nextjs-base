@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { combineReducers } from 'redux';\nimport placeholder from './placeholder/reducers';\nimport auth from './Auth/reducers';\nexport default combineReducers({\n  placeholder: placeholder,\n  auth: auth\n});","map":null,"metadata":{},"sourceType":"module"}

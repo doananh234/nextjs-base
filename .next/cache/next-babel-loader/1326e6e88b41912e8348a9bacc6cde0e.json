@@ -1,0 +1,1 @@
+{"ast":null,"code":"import styled from 'styled-components';\nexport const HomeTabContentWrapper = styled.section.withConfig({\n  displayName: \"styles__HomeTabContentWrapper\",\n  componentId: \"sc-1eybkzz-0\"\n})([\".ant-tabs{margin:20px;}@media (max-width:577px){}\"]);","map":null,"metadata":{},"sourceType":"module"}

@@ -1,0 +1,1 @@
+{"ast":null,"code":"import React from 'react';\nimport { RightHeaderWrapper } from './styles';\n\nvar RightHeader = function RightHeader(props) {\n  return React.createElement(RightHeaderWrapper, null, \"asdsadas\");\n};\n\nexport default RightHeader;","map":null,"metadata":{},"sourceType":"module"}
