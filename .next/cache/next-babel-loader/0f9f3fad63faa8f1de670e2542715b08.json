@@ -1,1 +1,0 @@
-{"ast":null,"code":"import styled from 'styled-components';\nexport const LeftHeaderWrapper = styled.div.withConfig({\n  displayName: \"styles__LeftHeaderWrapper\",\n  componentId: \"sc-1cq6mm0-0\"\n})([\"flex:1;\"]);","map":null,"metadata":{},"sourceType":"module"}

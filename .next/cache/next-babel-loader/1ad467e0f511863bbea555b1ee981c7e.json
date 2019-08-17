@@ -1,1 +1,0 @@
-{"ast":null,"code":"import { get, put } from './utils';\nexport const getAccountInfo = () => get('users/me');\nexport const updateAccountInfo = ({\n  avatar,\n  firstName,\n  lastName\n}) => put('users/me', {\n  avatar,\n  firstName,\n  lastName\n});","map":null,"metadata":{},"sourceType":"module"}

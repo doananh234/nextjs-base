@@ -1,1 +1,0 @@
-{"ast":null,"code":"import React from 'react';\nimport { LeftHeaderWrapper } from './styles';\nimport LogoImage from '../../LogoImage';\n\nconst LeftHeader = props => React.createElement(LeftHeaderWrapper, null, React.createElement(LogoImage, null));\n\nexport default LeftHeader;","map":null,"metadata":{},"sourceType":"module"}

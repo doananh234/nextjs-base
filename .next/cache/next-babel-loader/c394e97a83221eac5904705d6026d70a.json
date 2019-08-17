@@ -1,1 +1,0 @@
-{"ast":null,"code":"import styled from 'styled-components';\nexport var CategoryItemWrapper = styled.div.withConfig({\n  displayName: \"styles__CategoryItemWrapper\",\n  componentId: \"q7a3dn-0\"\n})([\"text-align:center;padding:10px;.icCategory{font-size:40px;}.txtName{margin-top:15px;}@media (max-width:577px){}\"]);","map":null,"metadata":{},"sourceType":"module"}
