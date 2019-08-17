@@ -5,7 +5,7 @@ export const SwitchWrapper = styled.div`
     padding: 15px 20px 20px;
     min-width: 175px;
     left: unset;
-    @media (max-width: 577px) {
+    @media (max-width: 768px) {
       top: unset !important;
       bottom: 42px;
       right: 0 !important;

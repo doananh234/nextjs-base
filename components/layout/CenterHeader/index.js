@@ -1,41 +1,29 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { Menu } from 'antd';
+// import PropTypes from 'prop-types';
+import { Tabs } from 'antd';
 import i18next from 'i18next';
+import { useSelector, useDispatch } from 'react-redux';
 import { CenterHeaderWrapper } from './styles';
+import { changeHomeTab } from '../../../redux/app/actions';
 
-const NAVS = [
-  {
-    key: 'home',
-    title: 'navs.home',
-    href: '/',
-  },
-  {
-    key: 'contact',
-    title: 'navs.contact',
-    href: '/contact',
-  },
-  {
-    key: 'faq',
-    title: 'navs.faq',
-    href: '/faq',
-  },
-];
-
-const CenterHeader = props => (
-  <CenterHeaderWrapper>
-    <Menu
-      theme="dark"
-      mode="horizontal"
-      defaultSelectedKeys={[NAVS[0].key]}
-      style={{ lineHeight: '64px' }}
-    >
-      {NAVS.map(data => (
-        <Menu.Item key={data.key}>{i18next.t(data.title)}</Menu.Item>
-      ))}
-    </Menu>
-  </CenterHeaderWrapper>
-);
+const CenterHeader = () => {
+  const homeTabIndex = useSelector(state => state.app.homeTabIndex);
+  const dispatch = useDispatch();
+  return (
+    <CenterHeaderWrapper>
+      <Tabs onChange={e => dispatch(changeHomeTab(e))} activeKey={homeTabIndex}>
+        <Tabs.TabPane
+          tab={<span className="headline">{i18next.t('home.refunds')}</span>}
+          key="1"
+        />
+        <Tabs.TabPane
+          tab={<span className="headline">{i18next.t('home.coupons')}</span>}
+          key="2"
+        />
+      </Tabs>
+    </CenterHeaderWrapper>
+  );
+};
 CenterHeader.propTypes = {};
 
 export default CenterHeader;

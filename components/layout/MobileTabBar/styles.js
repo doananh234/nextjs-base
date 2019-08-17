@@ -1,48 +1,143 @@
 import styled from 'styled-components';
 
-export const MobileTabBarWrapper = styled.div`
-  flex: 1;
-  background: ${({ theme }) => theme.background.content};
-  & > .ant-tabs {
-    background: ${({ theme }) => theme.background.content};
-    & > .ant-tabs-bar {
-      background: ${({ theme }) => theme.background.container};
-      position: fixed;
-      left: 0;
-      right: 0;
-      bottom: -60px;
-      transition: all 0.3s ease-in-out;
+const makeMobileTabStyle = ({ theme, tabs }) => {
+  const str = tabs
+    .map(
+      e => `
+        #${e.key}:checked ~ .mobileTab .tabIcon.${e.key} {
+          color: ${theme.primary};
+        }
 
-      @media (max-width: 577px) {
-        bottom: 0px;
-        .ant-tabs-nav-container {
-          display: flex;
-          width: 100vh;
+        [class*="-MobileTab"] {
+          display: none;
         }
-        .ant-tabs-tab {
-          flex: 1;
-        }
-        .ant-tabs-nav {
-          width: 100vw;
-          > div {
-            width: 100%;
-            display: flex;
-            text-align: center;
-          }
-          .tabIcon {
-            font-size: 20px;
-          }
-        }
+
+        #${e.key}:checked ~ .content .${e.key} {
+          display: block;
+        }`
+    )
+    .join('\n');
+  return str;
+};
+
+export const MobileTabBarWrapper = styled.div`
+  .mobileTab {
+    flex: 1;
+    width: 100wh;
+    z-index: 2;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    bottom: -60px;
+    background: ${({ theme }) => theme.background.container};
+    transition: all 0.3s ease-in-out;
+    @media (max-width: 768px) {
+      bottom: 0px;
+      [class*='-MobileTab'] {
+        display: block;
       }
     }
-    @media (max-width: 577px) {
-      height: 100%;
-      padding-bottom: 40px;
-    }
   }
-  @media (max-width: 577px) {
-    footer {
-      display: none;
+
+  .tabIcon {
+    flex: 1;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    ${makeMobileTabStyle};
+    height: 100vh;
+    overflow: hidden;
+    .ant-layout {
+      height: 100vh;
+      overflow: hidden;
+      .ant-layout-header {
+        top: -64px;
+      }
+      .ant-layout-content {
+        overflow: auto;
+        padding-top: 0px;
+        margin-bottom: 64px;
+      }
+      .ant-layout-footer {
+        display: none;
+      }
+    }
+
+    .tabIcon {
+      padding: 12px 16px;
     }
   }
 `;
+
+// ${'' /* #homeTab:checked ~ .mobileTab {
+//   .tabIcon {
+//     &.homeTab {
+//       color: ${({ theme }) => theme.primary};
+//     }
+//   }
+// }
+
+// #homeTab:checked ~ .content {
+//   [class*='Tab'] {
+//     display: none;
+//   }
+//   .homeTab {
+//     display: block;
+//   }
+// }
+
+// #trophyTab:checked ~ .mobileTab {
+//   .tabIcon {
+//     &.trophyTab {
+//       color: ${({ theme }) => theme.primary};
+//     }
+//   }
+// }
+
+// #trophyTab:checked ~ .content {
+//   [class*='Tab'] {
+//     display: none;
+//   }
+//   .trophyTab {
+//     display: block;
+//   }
+// }
+
+// #giftTab:checked ~ .mobileTab {
+//   .tabIcon {
+//     &.giftTab {
+//       color: ${({ theme }) => theme.primary};
+//     }
+//   }
+// }
+
+// #giftTab:checked ~ .content {
+//   [class*='Tab'] {
+//     display: none;
+//   }
+//   .giftTab {
+//     display: block;
+//   }
+// }
+
+// #userTab:checked ~ .mobileTab {
+//   .tabIcon {
+//     &.userTab {
+//       color: ${({ theme }) => theme.primary};
+//     }
+//   }
+// }
+
+// #userTab:checked ~ .content {
+//   [class*='Tab'] {
+//     display: none;
+//   }
+//   .userTab {
+//     display: block;
+//   }
+// } */}

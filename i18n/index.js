@@ -18,8 +18,8 @@ i18n
         translation: viLocale,
       },
     },
-    lng: 'en',
-    fallbackLng: 'en',
+    lng: 'vi',
+    fallbackLng: 'vi',
     interpolation: {
       escapeValue: false,
     },

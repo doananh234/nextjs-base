@@ -14,7 +14,7 @@ export const RankingItemWrapper = styled.div`
     padding-right: 10px;
   }
   .avatar {
-    background: ${({theme}) => theme.background.content};
+    background: ${({ theme }) => theme.background.content};
     width: 50px;
     height: 50px;
   }
@@ -36,6 +36,6 @@ export const RankingItemWrapper = styled.div`
     }
   }
 
-  @media (max-width: 577px) {
+  @media (max-width: 768px) {
   }
 `;

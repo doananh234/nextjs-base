@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { Row, Col, Input, Button } from 'antd';
 import { FooterSubscribeWrapper } from './styles';
 
@@ -12,7 +12,7 @@ const FOOTER_INFO = {
   subcribeTitle: 'KNOW IT ALL FIRST!',
 };
 
-const FooterSubscribe = props => (
+const FooterSubscribe = () => (
   <FooterSubscribeWrapper>
     <Row gutter={16}>
       <Col sm={12} xs={24}>

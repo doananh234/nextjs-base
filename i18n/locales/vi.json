@@ -1,6 +1,91 @@
 {
   "appInfo": {
-    "footer": "RAA ©2018 được tạo bởi Anh Doan",
-    "name": "NEXT JS"
+    "footer": "RAA ©2018 Created by Anh Doan",
+    "name": "Cashbag"
+  },
+  "contacts": {
+    "support": "Hỗ trợ",
+    "email": "hotro@cashbag.vn",
+    "facebook": "https://www.facebook.com",
+    "messenger": "https://www.facebook.com"
+  },
+  "navs": {
+    "home": "Trang chủ",
+    "contact": "Liên hệ",
+    "faq": "FAQ"
+  },
+  "footer": {
+    "faq": "Câu hỏi thường gặp",
+    "copyright": "Copyright 2019 Cashbag.vn",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
+  },
+  "home": {
+    "shopping": "Mua sắm",
+    "all": "Tất cả",
+    "refunds": "Hoàn tiền",
+    "coupons": "Mã giảm giá",
+    "account": "Tài khoản",
+    "ranking": "Xếp hạng",
+    "category": "Danh Mục",
+    "topRefund": "Top Thương Hiệu Hoàn Tiền",
+    "appStore": {
+      "title": "Cashbag App",
+      "description": "got more refund money with app.",
+      "tryItNow": "try it now!"
+    }
+  },
+  "user": {
+    "waitingConfirmMoney": "Hoàn tiền chờ duyệt",
+    "yourBag": "Túi Của Bạn",
+    "overbalance": "Số dư trong túi",
+    "username": "Tên tài khoản",
+    "createAccount": "Tạo Tài Khoản"
+  },
+  "settings": {
+    "logout": "Đăng xuất",
+    "notification": "Thông báo",
+    "history": "Lịch sử đơn hàng",
+    "support": "Hổ trợ",
+    "ratting": "Đánh giá"
+  },
+  "refunds": {
+    "title": "Hoàn Tiền"
+  },
+  "buttons": {
+    "downloadApp": "Tải Mobile App",
+    "seeMore": "Xem thêm",
+    "buyNow": "Mua Ngay",
+    "downloadAppCashbag": "Tải app Cashbag",
+    "loginFB":"Đăng ký bằng Facebook",
+    "loginGoogle":"Đăng ký bằng Google"
+  },
+  "unit": {
+    "order": "Đơn hàng",
+    "coupon": "mã giảm giá",
+    "refundedMoney": "Tiền đã hoàn"
+  },
+  "brandDetail": {
+    "coupons": "Mã Giảm Giá",
+    "cashbagWeb": "Cashbag.vn",
+    "cashbagApp":"Cashbag Mobile App"
+  },
+  "refundRule": {
+    "refundTime": {
+      "title": "Thời gian hoàn tiền",
+      "rule1": "Cashbag ghi nhận đơn hàng sau 2h",
+      "rule2": "Bạn sẽ nhận hoàn tiền vào ngày 25 của tháng tiếp theo"
+    },
+    "beforeBuy": {
+      "title": "Trước khi bạn bấm Mua Ngay",
+      "rule1": "Chỉ áp dụng hoàn tiền trên ứng dụng Shopee. Bạn cần tải app trước khi mua.",
+      "rule2": "Chỉ hoàn tiền cho 1 giỏ hàng được tạo sau mỗi lần bấm \"Mua Ngay\"",
+      "rule3": "Shopee hoàn tiền tối đa 150.000đ/ đơn hàng"
+    },
+    "failure": {
+      "title": "Bạn hoàn tiền không thành công?",
+      "rule1": "Huỷ, đổi trả, bom hàng, tự tạo shop và mua hàng để nhận hoa hồng",
+      "rule2": "Shopee chỉ hoàn tiền cho các mục có trên app Cashbag",
+      "rule3": "Bạn chưa cài đặt ứng dụng của shopee trên điện thoại"
+    }
   }
 }

@@ -11,28 +11,34 @@ export const InfoItemWrapper = styled.div`
   .vLeft {
     width: 55px;
     text-align: center;
+    display: flex;
     .icInfo {
       font-size: 50px;
     }
   }
   .vCenter {
     flex: 1;
-    padding-left: 10px;
+    padding-left: 15px;
     .txtTitle {
-      font-size: 16px;
-      font-weight: 600;
+      font-size: 14px;
+      font-family: 'Inter-bold';
       color: ${({ theme }) => theme.text.title};
     }
     .txtValue {
-      font-size: 20px;
-      font-weight: bold;
+      font-size: 18px;
+      font-family: 'Inter-bold';
       color: ${({ theme }) => theme.primary};
+    }
+    .txtDescription {
+      font-size: 13px;
+      font-family: 'Inter';
+      color: ${({ theme }) => theme.text.title};
     }
   }
   .vRight {
     font-size: 20px;
   }
 
-  @media (max-width: 577px) {
+  @media (max-width: 768px) {
   }
 `;

@@ -1,4 +1,4 @@
-import fetch from 'isomorphic-unfetch';
+import 'isomorphic-unfetch';
 import { getToken } from '../utils/cookies';
 
 const checkIfErrorOccurs = res =>
@@ -109,7 +109,7 @@ function requestWrapper(method) {
     const token = getToken(context);
 
     if (token) {
-      defaults.headers.Authorization = `${token}`;
+      defaults.headers.Authorization = `Bearer ${token}`;
     }
 
     if (data) {
@@ -118,7 +118,7 @@ function requestWrapper(method) {
 
     const paramsObj = {
       ...defaults,
-      headers: { ...params, ...defaults.headers },
+      headers: { Version: '1.1', 'Accept-Language': 'vi', ...defaults.headers },
     };
     return xFetch(url, paramsObj);
   };

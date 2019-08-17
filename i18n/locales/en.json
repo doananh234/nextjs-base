@@ -3,12 +3,20 @@
     "footer": "RAA ©2018 Created by Anh Doan",
     "name": "Cashbag"
   },
+  "contacts": {
+    "support": "Support",
+    "email": "hotro@cashbag.vn",
+    "facebook": "https://www.facebook.com",
+    "messenger": "https://www.facebook.com"
+  },
   "navs": {
     "home": "Home",
     "contact": "Contact",
     "faq": "FAQ"
   },
   "footer": {
+    "faq": "FAQ",
+    "copyright": "Copyright 2019 Cashbag.vn",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,"
   },
   "home": {
@@ -18,6 +26,8 @@
     "coupons": "Coupons",
     "account": "Account",
     "ranking": "Ranking",
+    "category": "Category",
+    "topRefund": "Top Refund",
     "appStore": {
       "title": "Cashbag App",
       "description": "got more refund money with app.",
@@ -25,7 +35,10 @@
     }
   },
   "user": {
-    "waitingConfirmMoney": "Waiting Confirm Money"
+    "waitingConfirmMoney": "Waiting Confirm Money",
+    "yourBag": "Your Bag",
+    "overbalance": "Balance",
+    "username": "Your Username"
   },
   "settings": {
     "logout": "Logout",
@@ -35,6 +48,41 @@
     "ratting": "Ratting"
   },
   "refunds": {
-    "refunded": "Refunded"
+    "title": "Refunded"
+  },
+  "buttons": {
+    "downloadApp": "Download Mobile App",
+    "seeMore": "See More",
+    "buyNow": "Buy Now",
+    "downloadAppCashbag": "Download App Cashbag"
+  },
+  "unit": {
+    "order": "Order",
+    "coupon": "Coupon",
+    "refundedMoney": "Refunded Money"
+  },
+  "brandDetail": {
+    "coupons": "coupons",
+    "cashbagWeb": "Cashbag.vn",
+    "cashbagApp":"Cashbag Mobile App"
+  },
+  "refundRule": {
+    "refundTime": {
+      "title": "Time to refund",
+      "rule1": "Cashbag records orders after 2pm",
+      "rule2": "You will receive a refund on the 25th of the following month"
+    },
+    "beforeBuy": {
+      "title": "Before you click Buy Now",
+      "rule1": "Only refunds apply on Shopee application. You need to download the app before buying.",
+      "rule2": "Refund only for 1 cart created after each \"Buy Now\" click",
+      "rule3": "Shopee maximum refund of VND 150,000 / order"
+    },
+    "failure": {
+      "title": "You failed refunds?",
+      "rule1": "Cancel, change, shop bombs, create shop and buy goods to receive commission",
+      "rule2": "Shopee only refunds the items on the Cashbag app",
+      "rule3": "You have not installed the shopee application on the phone"
+    }
   }
 }

@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const CategoriesWrapper = styled.section`
-  padding:0px 20px;
+  padding: 20px 20px 0px 20px;
+  background: ${({ theme }) => theme.background.content};
   @media (max-width: 768px) {
-    background: transparent;
+    background: ${({ theme }) => theme.background.content};
     width: auto;
     .categoryGroup {
       padding: 0px 5px;

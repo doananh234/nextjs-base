@@ -8,27 +8,37 @@ export const BannerItemWrapper = styled.div`
     background-size: cover;
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 100%;
     height: 500px;
   }
   .content {
-    h1 {
-      font-size: 40px;
-      font-weight: 600;
-      @media (max-width: 577px) {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    .txtTitle {
+      font-size: 75px;
+      color: ${({ theme }) => theme.primary};
+      letter-spacing: 0.375em;
+      @media (max-width: 768px) {
         font-size: 20px;
         width: 80%;
       }
     }
 
-    p {
-      font-size: 20px;
-      @media (max-width: 577px) {
+    .txtDescription {
+      color: ${({ theme }) => theme.primary};
+      font-size: 30px;
+      font-family: 'Inter-Bold';
+      letter-spacing: 0.63em;
+      @media (max-width: 768px) {
         font-size: 14px;
       }
     }
   }
-  @media (max-width: 577px) {
+
+  @media (max-width: 768px) {
     .bannerContainer {
       border-radius: 15px;
       height: 200px;

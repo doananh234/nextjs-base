@@ -1,35 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Icon, Carousel } from 'antd';
+import { Card } from 'antd';
+import Link from 'next/link';
 import i18next from 'i18next';
 import { BrandSectionWrapper } from './styles';
-import BrandItem from '../BrandItem';
-import CouponItem from '../CouponItem';
+import CustomButton from '../../CustomButton';
+import { getCover, getImageUrl } from '../../../utils/data';
 
-const SETTING = {
-  dots: false,
-  infinite: false,
-  swipeToSlide: true,
-  draggable: true,
-  slidesToShow: 3,
-  variableWidth: true,
-};
-
-const BrandSection = ({ item, isShowArrow,data }) => (
+const BrandSection = ({ item, onPressBuyNow }) => (
   <BrandSectionWrapper>
-  <Carousel {...SETTING}>
-    <BrandItem item={item} suffix={i18next.t('refunds.refunded')} />
-    {data.map(e => <CouponItem item={item} />)}
-    </Carousel>
+    <Card
+      title={<img alt="" src={getImageUrl(item)} className="logoTitle" />}
+      extra={
+        <CustomButton onClick={() => onPressBuyNow(item)} className="seeMore">
+          {i18next.t('buttons.buyNow')}
+        </CustomButton>
+      }
+      bordered={false}
+    >
+      <img alt="" src={getCover(item)} className="banner" />
+      <Link as={`/brand/${item._id}`} href="/brand/[id]">
+        <CustomButton type="link" className="btnSeeMore btn-solid">
+          {i18next.t('buttons.seeMore')}
+        </CustomButton>
+      </Link>
+    </Card>
   </BrandSectionWrapper>
 );
 BrandSection.propTypes = {
   item: PropTypes.object,
-  isShowArrow: PropTypes.bool,
+  onPressBuyNow: PropTypes.func,
 };
 
-BrandSection.defaultProps = {
-  isShowArrow: true,
-};
+BrandSection.defaultProps = {};
 
 export default BrandSection;

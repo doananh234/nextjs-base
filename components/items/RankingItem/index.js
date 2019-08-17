@@ -1,17 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {  Avatar } from 'antd';
+import { Avatar } from 'antd';
 import { RankingItemWrapper } from './styles';
 
 const RankingItem = ({ item, index }) => (
   <RankingItemWrapper>
-    <div className="vLeft">
-      #{index}
-    </div>
-    <Avatar className='avatar' src={item.avatar} />
-    <div className="vCenter">
-      {item.name}
-    </div>
+    <div className="vLeft">#{index}</div>
+    <Avatar className="avatar" src={item.avatar} />
+    <div className="vCenter">{item.name}</div>
     <div className="vRight">
       <div className="txtValue">{item.value}</div>
       <div className="txtUnit">{item.unit}</div>
@@ -23,7 +19,6 @@ RankingItem.propTypes = {
   index: PropTypes.number,
 };
 
-RankingItem.defaultProps = {
-};
+RankingItem.defaultProps = {};
 
 export default RankingItem;

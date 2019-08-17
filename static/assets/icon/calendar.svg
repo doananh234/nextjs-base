@@ -1,0 +1,16 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7 12H5V13H7V12Z" stroke="#717791" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M13 12H11V13H13V12Z" stroke="#717791" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M7 17H5V18H7V17Z" stroke="#717791" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M13 17H11V18H13V17Z" stroke="#717791" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M19 12H17V13H19V12Z" stroke="#717791" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M7 12H5V13H7V12Z" fill="#717791"/>
+<path d="M13 12H11V13H13V12Z" fill="#717791"/>
+<path d="M7 17H5V18H7V17Z" fill="#717791"/>
+<path d="M13 17H11V18H13V17Z" fill="#717791"/>
+<path d="M19 12H17V13H19V12Z" fill="#717791"/>
+<path d="M23 4H1V22H23V4Z" stroke="#717791" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M17 4V1" stroke="#717791" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M7 4V1" stroke="#717791" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M1 8H23" stroke="#717791" stroke-width="2" stroke-miterlimit="10"/>
+</svg>

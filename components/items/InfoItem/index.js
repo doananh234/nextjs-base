@@ -1,27 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Icon } from 'antd';
+import { Avatar } from 'antd';
 import { InfoItemWrapper } from './styles';
+import SVGIcon from '../../SVGIcon';
 
-const InfoItem = ({ item, isShowArrow }) => (
+const InfoItem = ({ item }) => (
   <InfoItemWrapper>
     <div className="vLeft">
-      <Icon className="icInfo" type={item.icon} />
+      {item.image && <img alt={item.image} src={item.image} />}
+      {item.avatar && <Avatar size={60} src={item.avatar} />}
+      {item.icon && <SVGIcon size={35} className="icInfo" name={item.icon} />}
     </div>
     <div className="vCenter">
       <div className="txtTitle">{item.title}</div>
       <div className="txtValue">{item.value}</div>
+      <div className="txtDescription">{item.description}</div>
     </div>
-    {isShowArrow && <Icon className="vRight" type="right" />}
   </InfoItemWrapper>
 );
+
 InfoItem.propTypes = {
   item: PropTypes.object,
-  isShowArrow: PropTypes.bool,
 };
 
-InfoItem.defaultProps = {
-  isShowArrow: true,
-};
+InfoItem.defaultProps = {};
 
 export default InfoItem;

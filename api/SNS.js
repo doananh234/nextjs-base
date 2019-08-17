@@ -1,10 +1,8 @@
 import { post } from './utils';
 
-export const fbSignIn = ({ accessToken }) =>
-  post('auth/loginFacebook', { accessToken });
+export const fbSignIn = token => post('/w/auth-facebook', { token });
 
-export const googleSignIn = ({ accessToken }) =>
-  post('auth/loginGoogle', { accessToken });
+export const googleSignIn = token => post('/w/auth-google', { token });
 
 /**
  * Sign in with email

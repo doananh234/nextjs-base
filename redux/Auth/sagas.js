@@ -1,43 +1,50 @@
 import { takeLatest, call, put } from 'redux-saga/effects';
 import Actions, { Types } from './actions';
+import { getHomeData } from '../home/actions';
+import { showLoginModal } from '../app/actions';
 import * as snsAPI from '../../api/SNS';
 import * as userAPI from '../../api/user';
 
-import { setToken } from '../../utils/cookies';
+import { setToken, removeToken } from '../../utils/cookies';
 import { showError } from '../exceptions';
 
-export function* fbSignIn(payload) {
+export function* signOut() {
   try {
-    const response = yield call(snsAPI.fbSignIn, payload);
-    const { token } = response || {};
+    yield call(removeToken);
+  } catch (err) {
+    //
+  }
+}
 
-    if (!token) {
+export function* fbSignIn({ accessToken }) {
+  try {
+    const response = yield call(snsAPI.fbSignIn, accessToken);
+    if (!response || !response.data) {
       throw response;
     }
 
-    yield put(Actions.fbSignInSuccess(response));
-    yield put(Actions.showAuthDrawer(false));
+    yield put(Actions.fbSignInSuccess(response.data.token));
     // TODO: Set token in cookies
-    setToken(token);
+    setToken(response.data.token);
+    yield put(getHomeData());
+    yield put(showLoginModal(false));
   } catch (err) {
     yield put(Actions.fbSignInFailure(err));
     showError(err);
   }
 }
 
-export function* googleSignIn(payload) {
+export function* googleSignIn({ accessToken }) {
   try {
-    const response = yield call(snsAPI.googleSignIn, payload);
-    const { token } = response || {};
+    const response = yield call(snsAPI.googleSignIn, accessToken);
 
-    if (!token) {
+    if (!response || !response.data) {
       throw response;
     }
-
-    yield put(Actions.googleSignInSuccess(response));
-    yield put(Actions.showAuthDrawer(false));
-    // TODO: Set token in cookies
-    setToken(token);
+    yield put(Actions.googleSignInSuccess(response.data.token));
+    setToken(response.data.token);
+    yield put(getHomeData());
+    yield put(showLoginModal(false));
   } catch (err) {
     yield put(Actions.googleSignInFailure(err));
     showError(err);
@@ -53,7 +60,7 @@ export function* signIn(payload) {
       throw response;
     }
     yield put(Actions.signInSuccess(response));
-    yield put(Actions.showAuthDrawer(false));
+    yield put(getHomeData());
     // // TODO: Set token in cookies
     setToken(token);
     yield put(Actions.getAccountInfo());
@@ -102,4 +109,5 @@ export default [
   takeLatest(Types.SIGN_IN, signIn),
   takeLatest(Types.SIGN_UP, signUp),
   takeLatest(Types.GET_ACCOUNT_INFO, getAccountInfo),
+  takeLatest(Types.SIGN_OUT, signOut),
 ];

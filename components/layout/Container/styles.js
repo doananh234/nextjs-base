@@ -6,10 +6,6 @@ export const ContainerWrapper = styled(Layout)`
     transition: all 0.3s ease-in-out;
   }
 
-  .ant-layout-content {
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
   ul {
     padding-inline-start: 0px;
     & > li {
@@ -23,7 +19,7 @@ export const ContainerWrapper = styled(Layout)`
     font-weight: bold;
     color: ${({ theme }) => theme.text.title};
     display: none;
-    @media (max-width: 577px) {
+    @media (max-width: 768px) {
       display: block;
     }
   }
@@ -39,5 +35,29 @@ export const ContainerWrapper = styled(Layout)`
   }
   .row {
     display: flex;
+  }
+  .ant-anchor-wrapper {
+    background: transparent;
+  }
+  .ant-anchor-ink {
+    display: none;
+  }
+
+  .hiddenCheckbox {
+    display: none;
+  }
+  .ant-layout-content {
+    padding-top: 64px;
+  }
+
+  .ant-list-item {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  @media (max-width: 768px) {
+    .ant-affix {
+      position: relative !important;
+    }
   }
 `;

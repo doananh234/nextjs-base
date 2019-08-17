@@ -1,5 +1,5 @@
 import Immutable from 'seamless-immutable';
-import { makeReducerCreator } from '../../utils/redux';
+import { makeReducerCreator } from '../utils';
 import { Types } from './actions';
 
 export const INITIAL_STATE = Immutable({

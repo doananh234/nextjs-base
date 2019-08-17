@@ -20,12 +20,13 @@ export const removeCookie = key => {
 const getCookieFromBrowser = key => cookie.get(key);
 
 const getCookieFromServer = (key, req) => {
-  if (!req.headers.cookie) {
+  if (!req?.headers?.cookie) {
     return undefined;
   }
-  const rawCookie = req.headers.cookie
-    .split(';')
-    .find(c => c.trim().startsWith(`${key}=`));
+  const rawCookie =
+    req &&
+    req.headers &&
+    req.headers.cookie.split(';').find(c => c.trim().startsWith(`${key}=`));
   if (!rawCookie) {
     return undefined;
   }

@@ -33,6 +33,6 @@ export const BrandItemWrapper = styled.div`
     font-size: 20px;
   }
 
-  @media (max-width: 577px) {
+  @media (max-width: 768px) {
   }
 `;

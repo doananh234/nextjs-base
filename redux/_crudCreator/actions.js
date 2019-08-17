@@ -1,18 +1,18 @@
 import _ from 'lodash';
 import { makeActionName } from '../../utils/text';
-import { makeActionCreator } from '../../utils/redux';
+import { makeActionCreator } from '../utils';
 
 export const CRUD_ACTIONS = [
   'GET_ALL',
   'GET_BY_ID',
-  'DELETE',
-  'EDIT',
-  'CREATE',
+  // 'DELETE',
+  // 'EDIT',
+  // 'CREATE',
   'CLEAR',
   'SET_CURRENT',
 ];
 export const ACTIONS_STATE = ['', 'SUCCESS', 'FAILURE'];
-export const PRIMARY_KEY = 'id';
+export const PRIMARY_KEY = '_id';
 
 export function makeCRUDConstantCreator(resource, ignoreActions = []) {
   const constants = {};

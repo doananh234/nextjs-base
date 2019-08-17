@@ -1,7 +1,7 @@
 import { takeLatest, put, call, fork, select } from 'redux-saga/effects';
 import _ from 'lodash';
 import { notification } from 'antd';
-import { apiWrapper } from '../../utils/redux';
+import { apiWrapper } from '../apiWrapper';
 import {
   getAllApi,
   getDataByIdApi,

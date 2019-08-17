@@ -11,17 +11,20 @@ const exception = {
 };
 
 export const showError = error => {
-  const keys = Object.keys(exception);
-  const index = keys.findIndex(key => error.exception === key);
-  if (index < 0) {
-    notification.error({
-      message: 'Notification',
-      description: exception.SomethingWentWrong,
-    });
-  } else {
-    notification.error({
-      message: 'Notification',
-      description: exception[keys[index]],
-    });
+  try {
+    const keys = Object.keys(exception);
+    const index = keys.findIndex(key => error.exception === key);
+    if (index < 0) {
+      notification.error({
+        message: error.message || exception.SomethingWentWrong,
+      });
+    } else {
+      notification.error({
+        message: 'Notification',
+        description: error.message || exception[keys[index]],
+      });
+    }
+  } catch {
+    //
   }
 };

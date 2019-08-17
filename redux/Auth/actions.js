@@ -1,4 +1,4 @@
-import { makeConstantCreator, makeActionCreator } from '../../utils/redux';
+import { makeConstantCreator, makeActionCreator } from '../utils';
 
 // TODO: Model name
 // export const MODEL = 'todos';
@@ -52,8 +52,8 @@ export const Types = {
 // TODO: Custom actions
 /** Facebook Sign In */
 
-const fbSignIn = (accessToken, info) =>
-  makeActionCreator(Types.FB_SIGN_IN, { accessToken, info });
+const fbSignIn = accessToken =>
+  makeActionCreator(Types.FB_SIGN_IN, { accessToken });
 const fbSignInSuccess = token =>
   makeActionCreator(Types.FB_SIGN_IN_SUCCESS, { token });
 const fbSignInFailure = error =>

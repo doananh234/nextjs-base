@@ -6,9 +6,9 @@ export const RankingWrapper = styled.section`
     text-align: center;
     font-size: 20px;
     font-weight: bold;
-    color: ${({ theme })=> theme.primary};
+    color: ${({ theme }) => theme.primary};
   }
-  @media (max-width: 577px) {
-    display: ${({ isHiddenMobile }) => (isHiddenMobile ?  'none' : 'block')};
+  @media (max-width: 768px) {
+    display: ${({ isHiddenMobile }) => (isHiddenMobile ? 'none' : 'block')};
   }
 `;

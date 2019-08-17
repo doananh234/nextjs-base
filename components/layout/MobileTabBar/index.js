@@ -1,25 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Tabs, Icon } from 'antd';
+import { Icon } from 'antd';
 import { MobileTabBarWrapper } from './styles';
 
-const MobileTabBar = ({ tabs }) => (
-  <MobileTabBarWrapper>
-    <Tabs tabPosition="bottom" defaultActiveKey={tabs[0].key}>
+const MobileTabBar = ({ tabs, children }) => (
+  <MobileTabBarWrapper tabs={tabs}>
+    {tabs.map(e => (
+      <input
+        style={{ display: 'none' }}
+        key={e.key}
+        defaultChecked={e.default}
+        name="tab"
+        type="radio"
+        id={e.key}
+      />
+    ))}
+    <div className="mobileTab">
       {tabs.map(tab => (
-        <Tabs.TabPane
-          tab={<Icon className="tabIcon" type={tab.icon} />}
-          key={tab.key}
-        >
-          {tab.component}
-        </Tabs.TabPane>
+        // eslint-disable-next-line
+        <label key={tab.key} className={`tabIcon ${tab.key}`} htmlFor={tab.key}>
+          <Icon type={tab.icon} />
+        </label>
       ))}
-    </Tabs>
+    </div>
+    <div className="content">{children}</div>
   </MobileTabBarWrapper>
 );
 
 MobileTabBar.propTypes = {
   tabs: PropTypes.array,
+  children: PropTypes.any,
 };
 
 export default MobileTabBar;

@@ -4,11 +4,11 @@ import { Provider } from 'react-redux';
 import withRedux from 'next-redux-wrapper';
 import withReduxSaga from 'next-redux-saga';
 import { ThemeProvider } from 'styled-components';
-import AuthActions from '../redux/Auth/actions';
 
 import configureStore from '../redux/store';
-import { isAuthenticated } from '../utils/cookies';
 import theme from '../config/theme';
+import { isAuthenticated } from '../utils/cookies';
+import AuthActions from '../redux/auth/actions';
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {

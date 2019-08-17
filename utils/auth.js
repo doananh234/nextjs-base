@@ -42,28 +42,6 @@ export const withAuthSync = WrappedComponent =>
       return { ...componentProps, token };
     }
 
-    constructor(props) {
-      super(props);
-
-      //   this.syncLogout = this.syncLogout.bind(this);
-    }
-
-    // componentDidMount() {
-    //   window.addEventListener('storage', this.syncLogout);
-    // }
-
-    // componentWillUnmount() {
-    //   window.removeEventListener('storage', this.syncLogout);
-    //   window.localStorage.removeItem('logout');
-    // }
-
-    // syncLogout(event) {
-    //   if (event.key === 'logout') {
-    //     console.log('logged out from storage!');
-    //     Router.push('/login');
-    //   }
-    // }
-
     render() {
       return <WrappedComponent {...this.props} />;
     }

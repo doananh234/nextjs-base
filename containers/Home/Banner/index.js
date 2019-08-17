@@ -6,29 +6,29 @@ import BannerItem from '../../../components/items/BannerItem';
 
 const DATA = [
   {
-    title: 'welcome to fashion',
-    description: 'men fashion',
+    title: 'MUA SẮM HOÀN TIỀN',
+    description: 'CÙNG CASHBAG',
     url: '/left-sidebar/collection',
     image:
       'https://res.cloudinary.com/csmenouvo/image/upload/v1558605708/blog-post-2.jpg',
   },
   {
-    title: 'welcome to fashion',
-    description: 'women fashion',
+    title: 'MUA SẮM HOÀN TIỀN',
+    description: 'CÙNG CASHBAG',
     url: '/left-sidebar/collection',
     image:
       'https://res.cloudinary.com/csmenouvo/image/upload/v1558605708/blog-post-3.jpg',
   },
   {
-    title: 'welcome to fashion',
-    description: 'men fashion',
+    title: 'MUA SẮM HOÀN TIỀN',
+    description: 'CÙNG CASHBAG',
     url: '/left-sidebar/collection',
     image:
       'https://res.cloudinary.com/csmenouvo/image/upload/v1558605708/blog-post-1.jpg',
   },
 ];
 
-const Banner = () => {
+const Banner = props => {
   const settings = {
     swipeToSlide: true,
     // centerMode: true,
@@ -36,7 +36,7 @@ const Banner = () => {
     // centerPadding: '60px',
     responsive: [
       {
-        breakpoint: 577,
+        breakpoint: 768,
         settings: {
           centerMode: true,
           dots: false,
@@ -46,7 +46,7 @@ const Banner = () => {
     ],
   };
   return (
-    <BannerWrapper>
+    <BannerWrapper {...props}>
       <h1 className="sectionTitle">{i18next.t('home.shopping')}</h1>
       <Carousel {...settings} autoplay>
         {DATA.map((e, index) => (

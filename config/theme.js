@@ -1,5 +1,5 @@
 const theme = {
-  primary: '#cc3366',
+  primary: '#CC3366',
   secondary: '#FEAC01',
   color: {
     orange: '#FEAC01', // 0: Orange
@@ -27,8 +27,8 @@ const theme = {
   grayscaleDark: '#bababa',
   grayscaleLight: '#F3F3F3',
   text: {
-    primary: "#000",
-    title: '#7f7f7f',
+    primary: '#000',
+    title: '#717791',
     heading: '#3a393d',
     headingLight: '#474b68',
     text: '#7f7f7f',
@@ -38,7 +38,7 @@ const theme = {
     textSuperDark: '#262626',
   },
   border: {
-    default: '#e9e9e9',
+    default: '#f0f2f5',
     dark: '#d8d8d8',
     light: '#ebebeb',
   },
